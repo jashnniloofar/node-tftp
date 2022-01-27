@@ -18,6 +18,7 @@ declare namespace tftp {
     }
 
     interface ServerOptions extends ClientOptions {
+        portRange: { start: number; end: number };
         root: string;
         denyGET: boolean;
         denyPUT: boolean;
