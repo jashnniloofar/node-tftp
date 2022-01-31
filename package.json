@@ -1,10 +1,10 @@
 {
-	"name": "tftp",
-	"version": "0.1.2",
+	"name": "node-tftp",
+	"version": "0.1.4",
 	"description": "Streaming TFTP client and server",
 	"keywords": ["tftp", "client", "stream"],
-	"author": "Gabriel Llamas <gagle@outlook.com>",
-	"repository": "git://github.com/gagle/node-tftp.git",
+	"author": "Hojjat Jashnniloofar <jashnniloofar@gmail.com>",
+	"repository": "git://github.com/jashnniloofar/node-tftp.git",
 	"engines": {
 		"node": ">=0.10"
 	},

@@ -3,10 +3,10 @@ tftp
 
 #### Streaming TFTP client and server ####
 
-[![NPM version](https://badge.fury.io/js/tftp.png)](http://badge.fury.io/js/tftp "Fury Version Badge")
-[![Dependency Status](https://david-dm.org/gagle/node-tftp.png)](https://david-dm.org/gagle/node-tftp "David Dependency Manager Badge")
+[![NPM version](https://badge.fury.io/js/node-tftp.png)](http://badge.fury.io/js/node-tftp "Fury Version Badge")
+[![Dependency Status](https://david-dm.org/jashnniloofar/node-tftp.png)](https://david-dm.org/jashnniloofar/node-tftp "David Dependency Manager Badge")
 
-[![NPM installation](https://nodei.co/npm/tftp.png?mini=true)](https://nodei.co/npm/tftp "NodeICO Badge")
+[![NPM installation](https://nodei.co/npm/node-tftp.png?mini=true)](https://nodei.co/npm/node-tftp "NodeICO Badge")
 
 Full-featured streaming TFTP client and server. It supports most of the RFCs:
 
@@ -66,7 +66,7 @@ Currently, in Windows there is a problem concerning the buffering of the receive
 <a name="client_streams"></a>
 __Streams__
 
-For the sake of simplicity the following examples omit the error handling. See the [streams.js](https://github.com/gagle/node-tftp/blob/master/examples/client/streams.js) example or the [source code](https://github.com/gagle/node-tftp/blob/master/lib/client.js) of the [get()](#client-get) and [put()](#client-put) functions for more information.
+For the sake of simplicity the following examples omit the error handling. See the [streams.js](https://github.com/jashnniloofar/node-tftp/blob/master/examples/client/streams.js) example or the [source code](https://github.com/jashnniloofar/node-tftp/blob/master/lib/client.js) of the [get()](#client-get) and [put()](#client-put) functions for more information.
 
 __GET remote > local__
 
@@ -439,7 +439,7 @@ server.on ("request", function (req, res){
 <a name="graceful_shutdown"></a>
 __Graceful shutdown__
 
-When the server closes the current transfers are not aborted to allow them to finish. If you need to shutdown the server completely, you must abort all the current transfers manually. Look at [this](https://github.com/gagle/node-tftp/blob/master/examples/server/graceful-shutdown.js) example to know how to do it.
+When the server closes the current transfers are not aborted to allow them to finish. If you need to shutdown the server completely, you must abort all the current transfers manually. Look at [this](https://github.com/jashnniloofar/node-tftp/blob/master/examples/server/graceful-shutdown.js) example to know how to do it.
 
 ---
 
@@ -531,7 +531,7 @@ __close__
 
 Arguments: none.
 
-Emitted when the server closes. New requests are not accepted. Note that the current transfers are not aborted. If you need to abort them gracefully, look at [this](https://github.com/gagle/node-tftp/blob/master/examples/server/graceful-shutdown.js) example.
+Emitted when the server closes. New requests are not accepted. Note that the current transfers are not aborted. If you need to abort them gracefully, look at [this](https://github.com/jashnniloofar/node-tftp/blob/master/examples/server/graceful-shutdown.js) example.
 
 <a name="server_event_error"></a>
 __error__
@@ -623,15 +623,15 @@ The PutStream has two additional methods:
 <a name="server_getstream_putstream_setsize"></a>
 - __setSize(size) : undefined__
 
-  Sets the size of the file to send. You need to call to this method only with GET requests when you're using a custom request listener, otherwise the request will just wait. Look at the examples [no-pipe.js](https://github.com/gagle/node-tftp/blob/master/examples/server/no-pipe.js) and [user-extensions-resume.js](https://github.com/gagle/node-tftp/blob/master/examples/user-extensions-resume.js) for more details.
+  Sets the size of the file to send. You need to call to this method only with GET requests when you're using a custom request listener, otherwise the request will just wait. Look at the examples [no-pipe.js](https://github.com/jashnniloofar/node-tftp/blob/master/examples/server/no-pipe.js) and [user-extensions-resume.js](https://github.com/jashnniloofar/node-tftp/blob/master/examples/user-extensions-resume.js) for more details.
 
 - __setUserExtensions(userExtensions) : undefined__
 
   Sets the user extensions to send back to the client in response to the received ones. You cannot send extensions different from the ones that are sent by the client. This method must be called before [setSize()](#server_getstream_putstream_setsize).
 
-  As said previously, the TFTP protocol doesn't have any built-in authentication mechanism but thanks to the user extensions you can implement a simple authentication as showed [here](https://github.com/gagle/node-tftp/blob/master/examples/user-extensions-authentication.js).
+  As said previously, the TFTP protocol doesn't have any built-in authentication mechanism but thanks to the user extensions you can implement a simple authentication as showed [here](https://github.com/jashnniloofar/node-tftp/blob/master/examples/user-extensions-authentication.js).
 
-  Look at the [examples](https://github.com/gagle/node-tftp/tree/master/examples) for more details.
+  Look at the [examples](https://github.com/jashnniloofar/node-tftp/tree/master/examples) for more details.
 
 ---
 
