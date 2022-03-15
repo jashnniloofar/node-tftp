@@ -36,6 +36,7 @@ declare namespace tftp {
         on(event: "error", listener: (err: Error) => void): this;
         on(event: "listening", listener: () => void): this;
         on(event: "request", listener: (req: GetStream, res: PutStream) => void): this;
+        on(event: string | symbol, listener: (...args: any[]) => void): this;
     }
 
     class Client extends EventEmitter {
@@ -73,6 +74,7 @@ declare namespace tftp {
         on(event: "error", listener: (err: Error) => void): this;
         on(event: "finish", listener: () => void): this;
         on(event: "stats", listener: (stats: Stats) => void): this;
+        on(event: string | symbol, listener: (...args: any[]) => void): this;
     }
 
     class PutStream extends Writable {
@@ -86,6 +88,7 @@ declare namespace tftp {
         on(event: "error", listener: (err: Error) => void): this;
         on(event: "finish", listener: () => void): this;
         on(event: "stats", listener: (stats: Stats) => void): this;
+        on(event: string | symbol, listener: (...args: any[]) => void): this;
     }
 
     interface Stats {
@@ -102,7 +105,7 @@ declare namespace tftp {
     }
 
     interface UserExtension {
-        [extenstion: string]: string;
+        [extension: string]: string;
     }
 
     const ENOENT = 1;

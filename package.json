@@ -1,6 +1,6 @@
 {
 	"name": "node-tftp",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "Streaming TFTP client and server",
 	"keywords": ["tftp", "client", "stream"],
 	"author": "Hojjat Jashnniloofar <jashnniloofar@gmail.com>",
