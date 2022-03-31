@@ -1,4 +1,6 @@
+import { EventEmitter } from "events";
 import { Readable, Writable } from "stream";
+
 export as namespace tftp;
 export = tftp;
 declare namespace tftp {
